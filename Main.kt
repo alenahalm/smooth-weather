@@ -11,12 +11,14 @@ fun smooth(index:Int, arr: Array<Float>):Float {
 
 fun main() {
 
-    val sc = Scanner(System.`in`)
     val n = readLine()!!.split(" ")[0].toInt()
     val line = readLine()!!.split(" ")
     val arr = Array(n){i -> line[i].toFloat()}
 
     val smooth_arr = Array(arr.size){num -> smooth(num, arr)}
-    println(smooth_arr.contentToString())
+    for (i in smooth_arr) {
+        print(i)
+        print(" ")
+    }
 
 }
